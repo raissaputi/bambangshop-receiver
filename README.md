@@ -68,16 +68,16 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement list_all_as_string function in Notification repository.`
     -   [x] Write answers of your learning module's "Reflection Subscriber-1" questions in this README.
 -   **STAGE 3: Implement services and controllers**
-    -   [ ] Commit: `Create Notification service struct skeleton.`
-    -   [ ] Commit: `Implement subscribe function in Notification service.`
-    -   [ ] Commit: `Implement subscribe function in Notification controller.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification service.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Commit: `Implement receive_notification function in Notification service.`
-    -   [ ] Commit: `Implement receive function in Notification controller.`
-    -   [ ] Commit: `Implement list_messages function in Notification service.`
-    -   [ ] Commit: `Implement list function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
+    -   [x] Commit: `Create Notification service struct skeleton.`
+    -   [x] Commit: `Implement subscribe function in Notification service.`
+    -   [x] Commit: `Implement subscribe function in Notification controller.`
+    -   [x] Commit: `Implement unsubscribe function in Notification service.`
+    -   [x] Commit: `Implement unsubscribe function in Notification controller.`
+    -   [x] Commit: `Implement receive_notification function in Notification service.`
+    -   [x] Commit: `Implement receive function in Notification controller.`
+    -   [x] Commit: `Implement list_messages function in Notification service.`
+    -   [x] Commit: `Implement list function in Notification controller.`
+    -   [x] Write answers of your learning module's "Reflection Subscriber-2" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -95,3 +95,15 @@ This is the place for you to write reflections:
     Dalam Rust, variabel static berbeda dengan Java, dalam hal mutabilitas dan thread safety. Variabel statis dalam Rust harus thread-safe dan immutable secara default untuk mencegah race condition dan memastikan keamanan thread. Hal ini berbeda dengan Java di mana variabel statis dapat diubah nilainya melalui fungsi statis. Dalam Rust, kita dapat menggunakan library eksternal seperti lazy_static. lazy_static memungkinkan pendefinisian variabel statis yang mutable dengan aman menggunakan mekanisme seperti Mutex atau RwLock, yang mengelola akses ke variabel tersebut sehingga memungkinkan mutasi yang aman pada multithreading. Dengan demikian, lazy_static memberikan cara untuk mendeklarasikan variabel statis yang mirip dengan di Java, tetapi dengan penanganan yang aman sesuai dengan model konkurensi pada Rust.
 
 #### Reflection Subscriber-2
+
+1. Have you explored things outside of the steps in the tutorial, for example: src/lib.rs? If not, explain why you did not do so. If yes, explain things that you have learned from those other parts of code.
+
+    lib.rs adalah file utama yang mendefinisikan modul utama dari sebuah proyek Rust. Di dalamnya, kita mendefinisikan variabel global seperti REQWEST_CLIENT dan APP_CONFIG, serta struktur dan fungsi-fungsi penting untuk mengelola konfigurasi aplikasi, penanganan kesalahan, dan respons. lib.rs berperan sebagai tempat untuk mengatur logika inti dan fungsionalitas aplikasi dalam proyek Rust.
+
+2. Since you have completed the tutorial by now and have tried to test your notification system by spawning multiple instances of Receiver, explain how Observer pattern eases you to plug in more subscribers. How about spawning more than one instance of Main app, will it still be easy enough to add to the system?
+
+    Observer pattern memudahkan penambahan subscriber karena subscriber-subscriber yang ada telah terdaftar di subjek. Penambahan subscriber baru dapat dilakukan tanpa mengubah kode subjek. Jika ingin menambahkan lebih dari satu instance dari aplikasi Main, perlu mempertimbangkan kompleksitas tambahan dalam manajemen dan koordinasi antar-instance. 
+
+3. Have you tried to make your own Tests, or enhance documentation on your Postman collection? If you have tried those features, tell us whether it is useful for your work (it can be your tutorial work or your Group Project).
+
+    Saya belum mencoba membuat tes sendiri. Saya yakin penggunaan Postman akan sangat membantu dalam pengerjaan TK
